@@ -4,8 +4,11 @@
 
 #permANOVA test 
 library(ggvegan)
-micro_matrix <- read_csv("data/Aging_microbiome_beta_diversity.csv", col_names = TRUE) #figure 4
-micro_matrix <- read_csv("data/Aging_microbiome_beta_diversity_p16.csv", col_names = TRUE) #figure 1
+micro_matrix <- read_csv("data/Aging_microbiome_beta_diversity.csv", col_names = TRUE) 
+micro_matrix <- read_csv("data/Aging_microbiome_beta_diversity_p16.csv", col_names = TRUE) 
+micro_matrix <- read_csv("data/Preventative_Revision_Beta_diversity.csv", col_names = TRUE) 
+micro_matrix <- read_csv("data/BMT_revision_beta_diversity.csv", col_names = TRUE) 
+micro_matrix <- read_csv("data/DQ_revision_beta_diversity.csv", col_names = TRUE) 
 
 micro_matrix1 <- as.dist(micro_matrix)
 micro_matrix$sample <- gsub("\\..*", "",colnames(micro_matrix))
